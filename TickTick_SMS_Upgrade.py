@@ -35,7 +35,6 @@ def main():
   
   formated_time = datetime.datetime.strftime(formated_time,"%Y%m%d-%H%M")
   formated_time = datetime.datetime.strptime(formated_time,"%Y%m%d-%H%M")
-  print (formated_time)
   
 
   logging.info("Sending Messages: ")
@@ -47,7 +46,6 @@ def main():
           due_date = task['dueDate']
           due_date = due_date[0:len(due_date)-12]
           due_date_convert = datetime.datetime.strptime(due_date, '%Y-%m-%dT%H:%M')
-          print(due_date_convert)
         
       except KeyError:
           due_date_convert = None
