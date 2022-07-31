@@ -5,8 +5,6 @@ from ticktick.api import TickTickClient   # Main Interface
 import sms_platform
 import datetime
 import time
-import pytz
-from keep_alive import keep_alive
 
 def time_in_range(start, current):
     """Returns whether current is in the range [start, end]"""
@@ -73,7 +71,4 @@ def main():
 
   
 
-keep_alive()
-while True:
-  main()
-  time.sleep(50)
+main()
